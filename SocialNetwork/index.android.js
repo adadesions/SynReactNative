@@ -24,6 +24,7 @@ import {
 // My Components
 import SynHeader from './components/SynHeader'
 import SynFooter from './components/SynFooter'
+import SynContent from './components/SynContent'
 
 export default class SocialNetwork extends Component {
   render() {
@@ -31,7 +32,7 @@ export default class SocialNetwork extends Component {
       <StyleProvider style={getTheme(material)}>
         <Container>
           <SynHeader></SynHeader>
-          <Content></Content>
+          <SynContent></SynContent>
           <SynFooter></SynFooter>
         </Container>
       </StyleProvider>
