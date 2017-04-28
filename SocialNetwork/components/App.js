@@ -22,7 +22,12 @@ import SideBar from './SideBar'
 
 export default class App extends Component {
   state = {
-    isPress: false
+    isPress: false,
+    test: 12
+  }
+
+  changeStateIsPress(){
+    this.setState({isPress: !this.state.isPress});
   }
 
   render() {
@@ -42,7 +47,7 @@ export default class App extends Component {
         >
           <StyleProvider style={getTheme(material)}>
              <Container>
-               <SynHeader onPress={ () => { this.setState({ isPress: !this.state.isPress } ) }}/>
+               <SynHeader onPress={ () => { this.changeStateIsPress() }} myTest={this.state.test} />
                <SynContent />
                <SynFooter />
              </Container>

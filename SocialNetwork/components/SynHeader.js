@@ -30,7 +30,7 @@ export default class SynHeader extends Component{
                source={require('../public/slri.jpg')}
                style={{width:'50%', height: '50%'}}
             />
-            <Text style={{color:'#FFF'}}>Synchrotron</Text>
+            <Text style={{color:'#FFF'}}>Synchrotron {this.props.myTest}</Text>
          </Body>
          <Right>
             <Button transparent>
