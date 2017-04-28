@@ -30,9 +30,18 @@ export default class App extends Component {
     this.setState({isPress: !this.state.isPress});
   }
 
+  closeControlPanel = () => {
+    this._drawer.close()
+  };
+
+  openControlPanel = () => {
+    this._drawer.open()
+  };
+
   render() {
     return (
       <Drawer
+        ref={ (ref) => this._drawer = ref }
         open={this.state.isPress}
         type="overlay"
         content={<SideBar />}
@@ -47,7 +56,7 @@ export default class App extends Component {
         >
           <StyleProvider style={getTheme(material)}>
              <Container>
-               <SynHeader onPress={ () => { this.changeStateIsPress() }} myTest={this.state.test} />
+               <SynHeader onPress={ () => { this.openControlPanel() }} />               
                <SynContent />
                <SynFooter />
              </Container>
