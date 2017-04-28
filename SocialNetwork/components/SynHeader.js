@@ -26,7 +26,7 @@ export default class SynHeader extends Component{
                <Icon name='menu' />
             </Button>
          </Left>
-         <Body>
+         <Body style={{alignItems: 'center'}}>
                <Thumbnail
                source={require('../public/slri.jpg')}
                style={{width:'50%', height: '50%'}}
