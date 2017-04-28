@@ -18,7 +18,10 @@ export default class SynHeader extends Component{
     return (
       <Header>
          <Left>
-            <Button transparent>
+            <Button
+              transparent
+              onPress = { this.props.onPress }
+            >
                <Icon name='menu' />
             </Button>
          </Left>
