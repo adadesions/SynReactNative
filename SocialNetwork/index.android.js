@@ -21,14 +21,18 @@ import {
   Footer
 } from 'native-base';
 
+// My Components
+import SynHeader from './components/SynHeader'
+import SynFooter from './components/SynFooter'
+
 export default class SocialNetwork extends Component {
   render() {
     return (
       <StyleProvider style={getTheme(material)}>
         <Container>
-          <Header></Header>
+          <SynHeader></SynHeader>
           <Content></Content>
-          <Footer></Footer>
+          <SynFooter></SynFooter>
         </Container>
       </StyleProvider>
     );
