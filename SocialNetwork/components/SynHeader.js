@@ -26,14 +26,12 @@ export default class SynHeader extends Component{
                <Icon name='menu' />
             </Button>
          </Left>
-
-         <Body >
+         <Body>
                <Thumbnail
                source={require('../public/slri.jpg')}
                style={{width:'50%', height: '50%'}}
-            />
-            <Text style={{color:'#FFF'}}>Synchrotron {this.props.myTest}</Text>
-               />
+                />
+            <Text style={{color:'#FFF'}}>Synchrotron</Text>
          </Body>
          <Right>
             <Button transparent>
