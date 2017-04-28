@@ -1,14 +1,36 @@
 import React, { Component } from 'react'
 import {
+  Container,
+  Content,
   Footer,
-} from 'native-base'
+  FooterTab,
+  Button,
+  Icon,
+  Badge,
+  Text } from 'native-base';
 
 export default class SynFooter extends Component{
   render() {
     return (
-      <Footer>
-        
-      </Footer>
+      <Container>
+                  <Content />
+                  <Footer >
+                      <FooterTab>
+                          <Button>
+                              <Icon name="apps" />
+                          </Button>
+                          <Button>
+                              <Icon name="camera" />
+                          </Button>
+                          <Button active>
+                              <Icon active name="navigate" />
+                          </Button>
+                          <Button>
+                              <Icon name="person" />
+                          </Button>
+                      </FooterTab>
+                  </Footer>
+              </Container>
     );
   }
 }
