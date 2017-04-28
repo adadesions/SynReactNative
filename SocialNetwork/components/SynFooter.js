@@ -10,7 +10,6 @@ import {
   Text
 } from 'native-base'
 
-import { Link, Route } from 'react-router-native'
 
 export default class SynFooter extends Component{
   render() {
@@ -18,14 +17,10 @@ export default class SynFooter extends Component{
       <Footer>
           <FooterTab>
                 <Button>
-                  <Link to="/">
                     <Icon name="apps" />
-                  </Link>
                 </Button>
                 <Button>
-                  <Link to="/camera">
-                    <Icon name="camera" />
-                  </Link>
+                    <Icon name="camera" />                  
                 </Button>
               <Button active>
                   <Icon active name="navigate" />
