@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 // App Component
-import App from './components/SideBar'
+import App from './components/App'
 
 
 AppRegistry.registerComponent('SocialNetwork', () => App);

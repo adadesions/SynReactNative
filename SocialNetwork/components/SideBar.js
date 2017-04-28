@@ -22,14 +22,11 @@ import { Col, Row, Grid } from 'react-native-easy-grid';
 export default class SideBar extends Component {
   render() {
     return (
-          <Grid>
-            <Row style={{  height:200,  backgroundColor:'#2b00ff' }} >
-            <Image source={require('../public/slri.png')}
-            style={{ width:'100%', height: 200}}/>
-            </Row>
-            <Row  style={{  height:'100%', width:'100%', backgroundColor:'#FFF'}} >
+
               <Container>
-                <Content>
+                <Content style={{backgroundColor:'#FFF'}}>
+                <Image source={require('../public/slri.png')}
+                style={{ width:'100%', height: 200}}/>
                     <ListItem icon>
                         <Left>
                             <Icon name="mail" />
@@ -94,8 +91,7 @@ export default class SideBar extends Component {
                     </ListItem>
                   </Content>
                 </Container>
-              </Row>
-          </Grid>
+
     );
   }
 }
