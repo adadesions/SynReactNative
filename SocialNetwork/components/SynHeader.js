@@ -8,7 +8,8 @@ import {
   Icon,
   Thumbnail,
   Right,
-  Text
+  Text,
+  ListItem
 } from 'native-base'
 import {
   Image
@@ -18,15 +19,18 @@ export default class SynHeader extends Component{
     return (
       <Header>
          <Left>
-            <Button transparent>
+            <Button
+              transparent
+              onPress = { this.props.onPress }
+            >
                <Icon name='menu' />
             </Button>
          </Left>
-         <Body style={{justifyContent: 'flex-start',flexDirection: 'row'}}>
-            <Image
+         <Body>
+               <Thumbnail
                source={require('../public/slri.jpg')}
                style={{width:'50%', height: '50%'}}
-            />
+                />
             <Text style={{color:'#FFF'}}>Synchrotron</Text>
          </Body>
          <Right>
