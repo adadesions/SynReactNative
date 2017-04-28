@@ -19,6 +19,7 @@ import SynHeader from './SynHeader'
 import SynFooter from './SynFooter'
 import SynContent from './SynContent'
 import SideBar from './SideBar'
+import RightSideBar from './RightSideBar'
 
 export default class App extends Component {
   state = {
@@ -35,7 +36,7 @@ export default class App extends Component {
       <Drawer
         open={this.state.isPress}
         type="overlay"
-        content={<SideBar />}
+        content={<RightSideBar />}
         tapToClose={true}
         openDrawerOffset={0.2} // 20% gap on the right side of drawer
         panCloseMask={0.2}
