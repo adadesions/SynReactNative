@@ -7,7 +7,7 @@ export default class SynHeader extends Component{
   render() {
     return (
       <Header>
-        
+
       </Header>
     );
   }
