@@ -21,13 +21,22 @@ export default class SynContent extends Component{
   render() {
     return (
           <Container>
+          <Content>
               <Grid>
                 <Row  style={{  height:150 }} >
                   <Image source={require('../public/team.jpg')}
                   style={{ width: '100%', height: '100%'}}/>
                 </Row>
+
+
                 <Row  style={{ width:'100%',paddingTop: 10}}>
+                <Col>
                   <List >
+                  <ListItem >
+
+                          <Text>Team Dragon Ball</Text>
+
+                  </ListItem>
                     <ListItem avatar style={{ paddingTop: 10, paddingBottom: 10}}>
                         <Left>
                             <Thumbnail source={require('../public/nong.jpg')} />
@@ -78,8 +87,53 @@ export default class SynContent extends Component{
                     </ListItem>
 
                 </List>
+                </Col>
+
+                <Col>
+                <Row  style={{ width:'100%',paddingTop: 10}}>
+                  <List >
+                  <ListItem >
+
+                          <Text style={{color:'#f00'}}>Team Red Zone</Text>
+
+                  </ListItem>
+                    <ListItem avatar style={{ paddingTop: 10, paddingBottom: 10}}>
+                        <Left>
+                            <Thumbnail source={require('../public/mai.jpg')} />
+                        </Left>
+                        <Right style={{ paddingLeft: 20}}>
+                            <Text style={{color:'#00f'}}>P'Mai</Text>
+                        </Right>
+                    </ListItem>
+                    <ListItem avatar style={{ paddingTop: 10, paddingBottom: 10}}>
+                        <Left>
+                            <Thumbnail size={80}  source={require('../public/win.jpg')} />
+                        </Left>
+                        <Right style={{ paddingLeft: 20}}>
+                            <Text style={{color:'#00f'}}>Win</Text>
+                        </Right>
+                    </ListItem>
+                    <ListItem avatar style={{ paddingTop: 10, paddingBottom: 10}}>
+                        <Left>
+                            <Thumbnail size={80}  source={require('../public/beer.jpg')} />
+                        </Left>
+                        <Right style={{ paddingLeft: 20}}>
+                            <Text style={{color:'#00f'}}>Beer</Text>
+                        </Right>
+                    </ListItem>
+
+                </List>
               </Row>
+              </Col>
+
+              </Row>
+
+
+
+
+
             </Grid>
+            </Content>
         </Container>
     );
   }
