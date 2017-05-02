@@ -40,7 +40,7 @@ export default class SynContent extends Component{
                       <Body>
                           <Image style={{ resizeMode: 'cover', width:'100%' }} source={require('../public/tao.jpg')} />
                           <Text style={{ paddingTop: 10 }} >
-                              Mr. เต๋า คาสโนวาฆ่าไม่ตาย
+                              Mr. เต๋า แบดมือหนึ่ง
                           </Text>
                           <Button transparent textStyle={{color: '#87838B'}}>
                               <Icon name="logo-github" />
