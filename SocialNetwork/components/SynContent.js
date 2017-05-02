@@ -17,6 +17,35 @@ import {
 
 import { Col, Row, Grid } from 'react-native-easy-grid';
 
+const members1 = [
+  {name: 'P\'Nong', imgName: 'nong.jpg'},
+  {name: 'Toyakung', imgName: 'toy.jpg'},
+  {name: 'Nut', imgName: 'nut.jpg'},
+  {name: 'Tao', imgName: 'tao.jpg'},
+  {name: 'Lit', imgName: 'lit.jpg'},
+  {name: 'Ball', imgName: 'tao.jpg'}
+];
+
+const RenderListItem = (props) => {
+  const members = props.members;
+  const listItem = members.map( (member) =>
+      <ListItem avatar style={{ paddingTop: 10, paddingBottom: 10}}>
+        <Left>
+            <Thumbnail source={require(`../public/${member.imgName}`)} />            
+        </Left>
+        <Right style={{ paddingLeft: 20}}>
+            <Text>{member.name}</Text>
+        </Right>
+      </ListItem>
+  );
+
+  return (
+    <List>
+      {listItem}
+    </List>
+  );
+};
+
 export default class SynContent extends Component{
   render() {
     return (
@@ -32,61 +61,11 @@ export default class SynContent extends Component{
                 <Row  style={{ width:'100%',paddingTop: 10}}>
                 <Col>
                   <List >
-                  <ListItem >
-
-                          <Text>Team Dragon Ball</Text>
-
-                  </ListItem>
-                    <ListItem avatar style={{ paddingTop: 10, paddingBottom: 10}}>
-                        <Left>
-                            <Thumbnail source={require('../public/nong.jpg')} />
-                        </Left>
-                        <Right style={{ paddingLeft: 20}}>
-                            <Text>P'Nong</Text>
-                        </Right>
+                    <ListItem >
+                      <Text>Team Dragon Ball</Text>
                     </ListItem>
-                    <ListItem avatar style={{ paddingTop: 10, paddingBottom: 10}}>
-                        <Left>
-                            <Thumbnail size={80}  source={require('../public/toy.jpg')} />
-                        </Left>
-                        <Right style={{ paddingLeft: 20}}>
-                            <Text>Toyakung</Text>
-                        </Right>
-                    </ListItem>
-                    <ListItem avatar style={{ paddingTop: 10, paddingBottom: 10}}>
-                        <Left>
-                            <Thumbnail size={80}  source={require('../public/nut.jpg')} />
-                        </Left>
-                        <Right style={{ paddingLeft: 20}}>
-                            <Text>Nut</Text>
-                        </Right>
-                    </ListItem>
-                    <ListItem avatar style={{ paddingTop: 10, paddingBottom: 10}}>
-                        <Left>
-                            <Thumbnail size={80}  source={require('../public/tao.jpg')} />
-                        </Left>
-                        <Right style={{ paddingLeft: 20}}>
-                            <Text>Tao</Text>
-                        </Right>
-                    </ListItem>
-                    <ListItem avatar style={{ paddingTop: 10, paddingBottom: 10}}>
-                        <Left>
-                            <Thumbnail size={80}  source={require('../public/lit.jpg')} />
-                        </Left>
-                        <Right style={{ paddingLeft: 20}}>
-                            <Text>Lit</Text>
-                        </Right>
-                    </ListItem>
-                    <ListItem avatar style={{ paddingTop: 10, paddingBottom: 10}}>
-                        <Left>
-                            <Thumbnail size={80}  source={require('../public/tao.jpg')} />
-                        </Left>
-                        <Right style={{ paddingLeft: 20}}>
-                            <Text>Ball</Text>
-                        </Right>
-                    </ListItem>
-
-                </List>
+                  </List>
+                  <RenderListItem members={members1} />
                 </Col>
 
                 <Col>
@@ -121,17 +100,10 @@ export default class SynContent extends Component{
                             <Text style={{color:'#00f'}}>Beer</Text>
                         </Right>
                     </ListItem>
-
                 </List>
               </Row>
               </Col>
-
               </Row>
-
-
-
-
-
             </Grid>
             </Content>
         </Container>
